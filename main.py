@@ -22,6 +22,7 @@ def get_media(channel_username,client):
     for msgs in client.get_messages(channel_username, limit=1000):
         if msgs.media is not None:
             salt = config.get_random_file_name()
+            t_dir = time.strftime("%Y-%m-%d", time.localtime())
             filename = config.get_pic_path() + str(t_dir) + '/' + str(salt)
             client.download_media(msgs.media, filename)
 

@@ -37,6 +37,7 @@ class tg_watchon_class:
             if event.raw_text == '':
                 if event.media is not None:
                     salt = config.get_random_file_name()
+                    t_dir = time.strftime("%Y-%m-%d", time.localtime())
                     filename = self.data_storage_path + str(t_dir) + '/' + str(salt)
                     await self.client.download_media(event.media, filename)
             else:
