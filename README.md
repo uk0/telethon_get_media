@@ -56,3 +56,24 @@ root     25104 25086 51 Oct11 ?        3-23:35:57 python main.py
 * 定时任务脚本
 
 * dingding 提示脚本
+
+
+
+#### quick start
+
+
+```bash
+# modify 和 /volumeUSB1/usbshare 类似的目录
+
+# 启动程序
+
+cd telethon_get_media
+
+# 启动本身的程序
+nohup ./watch_dog.sh  2>&1 > /dev/null &
+
+# 启动报告
+nohup python task.py  2>&1 > /dev/null &
+
+
+```
