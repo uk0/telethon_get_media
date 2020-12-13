@@ -16,22 +16,6 @@
       * socks
       * asyncio
       
-      
-#### Start nohup 启动即可.
-
-```bash
-root     25086     1  0 Oct11 ?        00:00:00 python main.py
-root     25091 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25093 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25094 25086  0 Oct11 ?        00:06:12 [python] <defunct>
-root     25095 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25097 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25098 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25101 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25102 25086  0 Oct11 ?        00:00:00 [python] <defunct>
-root     25104 25086 51 Oct11 ?        3-23:35:57 python main.py
-```
-
 
 #### 说明
 
@@ -65,16 +49,13 @@ root     25104 25086 51 Oct11 ?        3-23:35:57 python main.py
 ```bash
 # modify 和 /volumeUSB1/usbshare 类似的目录
 
-# 启动程序
-
-cd telethon_get_media
 
 # 启动本身的程序
 # Control + C 程序会自动杀掉 python 
-screen  ./watch_dog.sh 
+./watch_dog.sh 
+or
+nohup ./watch_dog.sh &
 
-# 启动报告
-nohup python task.py  2>&1 > /dev/null &
-
-
+# 停止服务 必须要用kill -15 因为用了 trap 捕捉到 15 才会去结束 main 和 task
+ps -ef | grep 'watch_dog.sh' | awk '{print$2}'| xargs  kill -15 
 ```
