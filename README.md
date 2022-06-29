@@ -59,3 +59,9 @@ nohup ./watch_dog.sh &
 # 停止服务 必须要用kill -15 因为用了 trap 捕捉到 15 才会去结束 main 和 task
 ps -ef | grep 'watch_dog.sh' | awk '{print$2}'| xargs  kill -15 
 ```
+
+
+
+### up
+
+* 未来几天我会更新新的版本。：）
