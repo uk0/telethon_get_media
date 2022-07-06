@@ -1,5 +1,9 @@
-# telethon_get_media
+## telethon_get_media
 
+
+### 当前版本
+
+* beta 1.0.0 
 
 
 
