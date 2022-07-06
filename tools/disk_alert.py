@@ -19,7 +19,7 @@ def send_ding_talk_robot(title, bash_line):
         },
         "at": {
             "atMobiles": [
-                '18515601947'
+                '10086007009'
             ],
             "isAtAll": 'true',
         },
