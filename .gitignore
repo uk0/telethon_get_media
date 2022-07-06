@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+!zh_cn.config
+!bkzh_cn.config
 
 # C extensions
 *.so

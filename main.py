@@ -4,18 +4,13 @@ import time
 import socks
 from multiprocessing import Process ,cpu_count
 import os
-from main_v1 import tg_watchon_class
+from rt import tg_watchon_class
 from conf import config
-
-
-
 import logging
-pids = []
 
-# 下载 history 不是实时监听 实时监听在 `main_v1`
+# 下载 history 不是实时监听 实时监听在 `rt`
 
 def get_media(channel_username,client):
-    # login
     # myself = client.get_me()
     # print(channel_username)
     # limit = 1000 history 1000 records
@@ -29,18 +24,16 @@ def get_media(channel_username,client):
 if __name__ == '__main__':
 
     t = tg_watchon_class()
-    
-    if __name__ == '__main__':
-        p_list = []
-        # for xx in ['hao123']:
-        #     p_list.append(Process(target=get_media, args=('%s' % xx,t.get_client(),)))
+    p_list = []
+    # for xx in ['hao123']:
+    #     p_list.append(Process(target=get_media, args=('%s' % xx,t.get_client(),)))
 
-        # 独立启动监听
-        p_list.append(Process(target=t.start, args=()))
-        for xx in p_list:
-            xx.start()
-        for xx in p_list:
-            xx.join()
-    print('(Press Ctrl+C to stop this)')
+    # 独立启动监听
+    p_list.append(Process(target=t.start, args=()))
+    for xx in p_list:
+        xx.start()
+    for xx in p_list:
+        xx.join()
+    print('(Press Ctrl+C to main thread)')
 
 
