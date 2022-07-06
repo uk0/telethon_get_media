@@ -113,6 +113,11 @@ drwxr-xr-x 3 admin users     4096 Jul  6 23:26 ..
 
 ```bash
 sh show_groupby.sh /path/to/dir
+
+# 例如
+admin@DS918:/volume5/green_hdd/pysuper/telethon_get_media$ sh show_groupby.sh /volume5/green_hdd/pysuper/telethon_get_media/data/2022-07-06
+         468KiB   11 jpg
+         699MiB    7 mp4
 ```
 
 
