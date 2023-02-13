@@ -1,6 +1,10 @@
 ## telethon_get_media
 
 
+### 分享文件相关
+
+* 可以通过 https://github.com/uk0/file_encryption 加密后自释放分享 ：）Safe
+
 ### 当前版本
 
 * beta 1.0.0 
