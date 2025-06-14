@@ -15,6 +15,8 @@
 
 * 2.实时下载所有频道里面的 Media [自己加入的所有频道] `rt.py`
 
+* 3.下载获取历史与评论区 `his.py` 自己调用download media即可。
+
 
 #### Env Python 3.6 
 
